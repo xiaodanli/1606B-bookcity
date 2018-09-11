@@ -1,0 +1,24 @@
+{
+  "name": "1606b-bookcity",
+  "version": "1.0.0",
+  "description": "1606B-bookcity",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaodanli/1606B-bookcity.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xiaodanli/1606B-bookcity/issues"
+  },
+  "homepage": "https://github.com/xiaodanli/1606B-bookcity#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-webserver": "^0.9.1"
+  }
+}
