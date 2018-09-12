@@ -1,6 +1,6 @@
 define(function() {
     var init = function() {
-        alert('detail')
+        // alert('detail')
     }
     return init
 })

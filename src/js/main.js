@@ -4,17 +4,21 @@ require.config({
         //库文件
         'jquery': './libs/jquery-2.1.1.min',
         'page': './libs/page',
+        'swiper': './libs/swiper.min',
+        'handlebars': './libs/handlebars-v4.0.11',
 
         //common
         'get': './common/get',
+        'render': './common/render',
 
         //路由
-        'router': './router/index',
+        'router': './router/router',
         'config': './router/config',
 
         //view
-        'index': './view/index',
-        'detail': './view/detail'
+        'index': './viewjs/index',
+        'detail': './viewjs/detail'
+
     }
 })
 

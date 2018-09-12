@@ -16,6 +16,8 @@ var sass = require('gulp-sass');
 
 var autoprefixer = require('gulp-autoprefixer');
 
+var concat = require('gulp-concat');
+
 gulp.task('devServer', function() {
     return gulp.src('src')
         .pipe(server({
@@ -44,7 +46,7 @@ gulp.task('devServer', function() {
                     res.end(JSON.stringify({ code: 1, data: mock(pathname) }))
                 } else {
                     // pathname = pathname === '/' ? '/index.html' : pathname;
-                    pathname = /\.js|\.css|\.html$/.test(pathname) ? pathname : '/index.html';
+                    pathname = /\.js|\.css|\.html|\.jpg|\.png$/.test(pathname) ? pathname : '/index.html';
                     res.end(fs.readFileSync(path.join(__dirname, 'src', pathname)))
                 }
             }
@@ -58,6 +60,7 @@ gulp.task('devCss', function() {
         .pipe(autoprefixer({
             browsers: ['last 2 versions', 'Android>=4.0']
         }))
+        .pipe(concat('all.css'))
         .pipe(gulp.dest('./src/css'))
 })
 

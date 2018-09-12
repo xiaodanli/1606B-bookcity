@@ -1,0 +1,124 @@
+@import './_mixin.scss';
+@import './_config.scss';
+.con {
+    .swiper-container {
+        height: 100%;
+        .swiper-slide {
+            overflow: scroll;
+            -webkit-overflow-scrolling: touch;
+        }
+    }
+    .search-link {
+        margin: pxTorem(15px);
+        display: flex;
+        .not-input {
+            flex: 1;
+            height: pxTorem(44px);
+            line-height: pxTorem(44px);
+            border: 1px solid $border-color;
+            border-radius: 6px;
+            @include bg('../imgs/icon-search.png', pxTorem(10px));
+            background-size: pxTorem(18px);
+            padding-left: pxTorem(38px);
+        }
+        .switch-btn {
+            width: pxTorem(44px);
+            height: pxTorem(44px);
+            border: 1px solid $border-color;
+            border-radius: 6px;
+            margin-left: pxTorem(15px);
+            @include bg('../imgs/icon-swicth-list.png');
+            background-size: pxTorem(18px);
+        }
+    }
+    .banner-swiper {
+        img {
+            width: 100%;
+        }
+    }
+    .classify-wrap {
+        width: 100%;
+        display: flex;
+        dl {
+            width: 20%;
+            margin-top: pxTorem(10px);
+            dt {
+                width: pxTorem(30px);
+                height: pxTorem(30px);
+                margin: 0 auto;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            dd {
+                text-align: center;
+                line-height: 2;
+            }
+        }
+    }
+}
+
+.recommend-tit {
+    width: 100%;
+    font-weight: bold;
+    padding-left: pxTorem(15px);
+    line-height: pxTorem(44px);
+    border-bottom: 1px solid $border-color;
+}
+
+.list-l-r {
+    margin: pxTorem(15px);
+    dl {
+        display: flex;
+    }
+    dt {
+        width: pxTorem(100px);
+        height: pxTorem(120px);
+        overflow: hidden;
+        margin-right: pxTorem(15px);
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    dd {
+        h3 {
+            font-size: pxTorem($fz16);
+        }
+        .author {
+            color: $gray-color;
+            margin-top: pxTorem(10px);
+        }
+        .intro {
+            color: $gray-color;
+            @include line(2);
+            margin-top: pxTorem(10px);
+        }
+        .tag-list {
+            li {
+                padding: pxTorem(2px) pxTorem(3px);
+                display: inline-block;
+                border: 1px solid $green-color;
+                color: $green-color;
+                margin-right: pxTorem(2px);
+                margin-top: pxTorem(6px);
+            }
+        }
+    }
+}
+
+.recommend-list {
+    width: 100%;
+    li {
+        width: 100%;
+        line-height: pxTorem(44px);
+        border-bottom: 1px solid $border-color;
+        display: flex;
+        padding: 0 pxTorem(15px);
+        box-sizing: border-box;
+        .num {
+            color: red;
+        }
+    }
+}

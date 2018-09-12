@@ -21,6 +21,7 @@ define(['jquery', 'get'], function($, get) {
         get('/view/detail.html').then(function(res) {
             $('.wrap').html(res);
             ctx.data.script = 'detail';
+            ctx.data.api = '/api/detail';
             console.log('detail/detail', ctx);
             next();
         })
