@@ -11,10 +11,99 @@
     <div class="con">
         <div class="swiper-container wrap-swiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <!-- top-block -->
-                    <div class="block">
+                <!-- 盒子 -->
+                <div class="swiper-slide bookcity">
+                    <!-- 内容 -->
+                    <div class="content">
+                        <!-- top-block -->
+                        <div class="block">
 
+                            <div class="search-link">
+                                <div class="not-input">
+                                    请输入书名、关键词
+                                </div>
+                            </div>
+
+                            <div class="swiper-container banner-swiper">
+                                <div class="swiper-wrapper banner"></div>
+                            </div>
+
+                            <script type="text/x-handlebars-template" id="swiper-tpl">
+                                {{#each this}}
+                                <div class="swiper-slide">
+                                    <img src="{{ad_pic_url}}" alt="">
+                                </div>
+                                {{/each}}
+                            </script>
+
+                            <div class="classify-wrap"></div>
+
+                            <script type="text/x-handlebars-template" id="classify-tpl">
+                                {{#each this}}
+                                <dl>
+                                    <dt>
+                                    <img src="{{ad_copy}}" alt="">
+                                </dt>
+                                    <dd>{{ad_name}}</dd>
+                                </dl>
+                                {{/each}}
+                            </script>
+                        </div>
+                        <!-- top-block -->
+
+                        <!-- 本周最火 -->
+
+                        <div class="block">
+                            <h2 class="title">本周最火</h2>
+                            <div class="list-t-b hot"></div>
+                        </div>
+
+                        <!-- 本周最火 -->
+
+                        <!-- 重磅推荐 -->
+                        <div class="block">
+                            <h2 class="recommend-tit">重磅推荐</h2>
+                            <div class="list-l-r recommend-list"></div>
+                            <button class="change-btn">换一换</button>
+                        </div>
+
+                        <script type="text/x-handlebars-template" id="recommend-tpl">
+                            {{#each this}} {{#unless @index}}
+                            <dl>
+                                <dt>
+                                <img src="{{cover}}" alt="">
+                               <span class="first-num">{{addIndex @index}}</span> 
+                               <span class="status">{{#if finish}}完结{{else}}连载中{{/if}}</span> 
+                            </dt>
+                                <dd>
+                                    <h3>{{title}}</h3>
+                                    <span class="author">{{authors}}</span>
+                                    <p class="intro">{{summary}}</p>
+                                    <ul class="tag-list">
+                                        {{#each tags}}
+                                        <li class="tag-item">{{this}}</li>
+                                        {{/each}}
+                                    </ul>
+                                </dd>
+                            </dl>
+                            {{else}}
+                            <li>
+                                <span class="num">{{addIndex @index}}</span>
+                                <h3>{{title}}</h3>
+                                <span>{{authors}}</span>
+                            </li>
+                            {{/unless}} {{/each}}
+                        </script>
+                        <!-- 重磅推荐 -->
+
+                        <!-- 推荐 -->
+                        <div class="block">
+                            <div class="list-l-r loadmore"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                     <div class="shelf-content">
                         <div class="search-link">
                             <div class="not-input">
                                 请输入书名、关键词
@@ -22,83 +111,9 @@
                             <div class="switch-btn"></div>
                         </div>
 
-                        <div class="swiper-container banner-swiper">
-                            <div class="swiper-wrapper banner"></div>
-                        </div>
+                        <!-- 书架列表 -->
 
-                        <script type="text/x-handlebars-template" id="swiper-tpl">
-                            {{#each this}}
-                            <div class="swiper-slide">
-                                <img src="{{ad_pic_url}}" alt="">
-                            </div>
-                            {{/each}}
-                        </script>
-
-                        <div class="classify-wrap"></div>
-
-                        <script type="text/x-handlebars-template" id="classify-tpl">
-                            {{#each this}}
-                            <dl>
-                                <dt>
-                                    <img src="{{ad_copy}}" alt="">
-                                </dt>
-                                <dd>{{ad_name}}</dd>
-                            </dl>
-                            {{/each}}
-                        </script>
-                    </div>
-                    <!-- top-block -->
-
-                    <!-- 本周最火 -->
-
-                    <div class="block">
-                        <h2 class="title">本周最火</h2>
-                        <div class="list-t-b">
-                            <dl>
-                                <dt>
-                                    <img src="../imgs/book1.jpg" alt="">
-                                </dt>
-                                <dd>书名1</dd>
-                            </dl>
-                            <dl>
-                                <dt>
-                                        <img src="../imgs/book1.jpg" alt="">
-                                    </dt>
-                                <dd>书名2</dd>
-                            </dl>
-                            <dl>
-                                <dt>
-                                            <img src="../imgs/book1.jpg" alt="">
-                                        </dt>
-                                <dd>书名3</dd>
-                            </dl>
-                            <dl>
-                                <dt>
-                                        <img src="../imgs/book1.jpg" alt="">
-                                    </dt>
-                                <dd>书名4</dd>
-                            </dl>
-                            <dl>
-                                <dt>
-                                            <img src="../imgs/book1.jpg" alt="">
-                                        </dt>
-                                <dd>书名5</dd>
-                            </dl>
-                            <dl>
-                                <dt>
-                                                <img src="../imgs/book1.jpg" alt="">
-                                            </dt>
-                                <dd>书名6</dd>
-                            </dl>
-                        </div>
-                    </div>
-
-                    <!-- 本周最火 -->
-
-                    <!-- 重磅推荐 -->
-                    <div class="block">
-                        <h2 class="recommend-tit">重磅推荐</h2>
-                        <div class="list-l-r">
+                        <div class="shelf-list list-style">
                             <dl>
                                 <dt>
                                     <img src="../imgs/book1.jpg" alt="">
@@ -106,35 +121,48 @@
                                 <dd>
                                     <h3>标题</h3>
                                     <span class="author">作者</span>
-                                    <p class="intro">说明</p>
-                                    <ul class="tag-list">
-                                        <li class="tag-item">都市情缘</li>
-                                        <li class="tag-item">都市情缘</li>
-                                    </ul>
+                                    <p class="already">已读</p>
+                                    <p class="new">最新</p>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    <img src="../imgs/book1.jpg" alt="">
+                                </dt>
+                                <dd>
+                                    <h3>标题</h3>
+                                    <span class="author">作者</span>
+                                    <p class="already">已读</p>
+                                    <p class="new">最新</p>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    <img src="../imgs/book1.jpg" alt="">
+                                </dt>
+                                <dd>
+                                    <h3>标题</h3>
+                                    <span class="author">作者</span>
+                                    <p class="already">已读</p>
+                                    <p class="new">最新</p>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    <img src="../imgs/book1.jpg" alt="">
+                                </dt>
+                                <dd>
+                                    <h3>标题</h3>
+                                    <span class="author">作者</span>
+                                    <p class="already">已读</p>
+                                    <p class="new">最新</p>
                                 </dd>
                             </dl>
                         </div>
-                        <ul class="recommend-list">
-                            <li>
-                                <span class="num">02</span>
-                                <h3>标题</h3>
-                                <span>作者</span>
-                            </li>
-                            <li>
-                                <span class="num">02</span>
-                                <h3>标题</h3>
-                                <span>作者</span>
-                            </li>
-                            <li>
-                                <span class="num">02</span>
-                                <h3>标题</h3>
-                                <span>作者</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- 重磅推荐 -->
+
+                        <!-- 书架列表 -->
+                     </div>  
                 </div>
-                <div class="swiper-slide">2</div>
             </div>
         </div>
     </div>

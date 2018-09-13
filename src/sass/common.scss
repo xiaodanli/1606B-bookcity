@@ -42,6 +42,15 @@ body {
                 top: 0;
                 right: 0;
             }
+            .icon-back{
+                width: pxTorem(44px);
+                height: pxTorem(44px);
+                @include bg('../imgs/icon-back.png');
+                background-size: pxTorem(20px);
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
             .tab-wrap {
                 width: pxTorem(120px);
                 height: pxTorem(44px);
@@ -74,6 +83,35 @@ body {
                         margin: 0 auto;
                         display: block;
                     }
+                }
+            }
+            .search{
+                margin:pxTorem(5px) pxTorem(20px) pxTorem(5px) pxTorem(44px);
+                height: pxTorem(34px);
+                background: $write-color;
+                border:1px solid $border-color;
+                display: flex;
+                .icon-search{
+                    width:pxTorem(34px);
+                    height: pxTorem(34px);
+                    @include bg('../imgs/icon-search.png');
+                    background-size:pxTorem(18px);
+                    border-right: 1px solid $border-color;
+                }
+                .ipt{
+                    flex:1;
+                    height: pxTorem(34px);
+                    padding:0 pxTorem(10px);
+                    font-size:pxTorem($fz14);
+                }
+                .search-btn{
+                    width:pxTorem(44px);
+                    height: pxTorem(34px);
+                    font-size: pxTorem($fz14);
+                    background-color: transparent;
+                    outline:none;
+                    border:none;
+                    border-left:1px solid $border-color;
                 }
             }
         }
@@ -129,6 +167,27 @@ body {
         &:nth-child(3),
         &:nth-child(6) {
             text-align: right;
+        }
+    }
+}
+
+.label-list{
+    margin:pxTorem(15px);
+    display: flex;
+    flex-wrap: wrap;
+    .label-item{
+        padding:pxTorem(4px) pxTorem(10px);
+        font-size:pxTorem($fz14);
+        border:1px solid $border-color;
+        background-color: $tag-bg1;
+        margin-right:pxTorem(10px);
+        margin-bottom:pxTorem(10px);
+        border-radius: pxTorem(4px);
+        &:nth-child(3n+2){
+            background-color: $tag-bg2;
+        }
+        &:nth-child(3n){
+            background-color: $tag-bg3;
         }
     }
 }

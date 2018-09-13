@@ -63,6 +63,9 @@ html {
     margin-left: 0.4rem;
     background: url("../imgs/icon-swicth-list.png") no-repeat center center;
     background-size: 0.48rem; }
+    .con .search-link .switch-btn.list-style {
+      background: url("../imgs/icon-switch.png") no-repeat center center;
+      background-size: 0.48rem; }
 
 .con .banner-swiper img {
   width: 100%; }
@@ -86,6 +89,12 @@ html {
       text-align: center;
       line-height: 2; }
 
+.con .change-btn {
+  width: 100%;
+  height: 1.17333rem;
+  background-color: transparent;
+  font-size: 0.37333rem; }
+
 .recommend-tit {
   width: 100%;
   font-weight: bold;
@@ -95,6 +104,18 @@ html {
 
 .list-l-r {
   margin: 0.4rem; }
+  .list-l-r > li {
+    width: 100%;
+    line-height: 1.17333rem;
+    border-bottom: 1px solid #ddd;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 0.4rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+    .list-l-r > li .num {
+      color: red; }
   .list-l-r dl {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -103,10 +124,24 @@ html {
     width: 2.66667rem;
     height: 3.2rem;
     overflow: hidden;
-    margin-right: 0.4rem; }
+    margin-right: 0.4rem;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    position: relative; }
     .list-l-r dt img {
       width: 100%;
       height: 100%; }
+    .list-l-r dt .first-num {
+      position: absolute;
+      top: 0;
+      left: 10px;
+      color: red; }
+    .list-l-r dt .status {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.6); }
   .list-l-r dd h3 {
     font-size: 0.42667rem; }
   .list-l-r dd .author {
@@ -128,20 +163,34 @@ html {
     margin-right: 0.05333rem;
     margin-top: 0.16rem; }
 
-.recommend-list {
+.shelf-list {
   width: 100%; }
-  .recommend-list li {
+  .shelf-list dl {
     width: 100%;
-    line-height: 1.17333rem;
-    border-bottom: 1px solid #ddd;
+    padding: 0.4rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
-    padding: 0 0.4rem;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box; }
-    .recommend-list li .num {
-      color: red; }
+    display: flex; }
+  .shelf-list dt {
+    width: 2.66667rem;
+    height: 3.2rem; }
+    .shelf-list dt img {
+      width: 100%;
+      height: 100%; }
+  .shelf-list.list-style {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .shelf-list.list-style dl {
+      width: 33.3%;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+      .shelf-list.list-style dl .author, .shelf-list.list-style dl .new, .shelf-list.list-style dl .already {
+        display: none; }
 
 @charset "UTF-8";
 /*超过几行显示省略号*/
@@ -380,6 +429,14 @@ body {
         position: absolute;
         top: 0;
         right: 0; }
+      .wrap .inner-wrap header .icon-back {
+        width: 1.17333rem;
+        height: 1.17333rem;
+        background: url("../imgs/icon-back.png") no-repeat center center;
+        background-size: 0.53333rem;
+        position: absolute;
+        top: 0;
+        left: 0; }
       .wrap .inner-wrap header .tab-wrap {
         width: 3.2rem;
         height: 1.17333rem;
@@ -416,6 +473,35 @@ body {
             background-color: #ff6600;
             margin: 0 auto;
             display: block; }
+      .wrap .inner-wrap header .search {
+        margin: 0.13333rem 0.53333rem 0.13333rem 1.17333rem;
+        height: 0.90667rem;
+        background: #fff;
+        border: 1px solid #ddd;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+        .wrap .inner-wrap header .search .icon-search {
+          width: 0.90667rem;
+          height: 0.90667rem;
+          background: url("../imgs/icon-search.png") no-repeat center center;
+          background-size: 0.48rem;
+          border-right: 1px solid #ddd; }
+        .wrap .inner-wrap header .search .ipt {
+          -webkit-box-flex: 1;
+              -ms-flex: 1;
+                  flex: 1;
+          height: 0.90667rem;
+          padding: 0 0.26667rem;
+          font-size: 0.37333rem; }
+        .wrap .inner-wrap header .search .search-btn {
+          width: 1.17333rem;
+          height: 0.90667rem;
+          font-size: 0.37333rem;
+          background-color: transparent;
+          outline: none;
+          border: none;
+          border-left: 1px solid #ddd; }
     .wrap .inner-wrap .con {
       width: 100%;
       -webkit-box-flex: 1;
@@ -464,3 +550,78 @@ body {
     .list-t-b dl:nth-child(3), .list-t-b dl:nth-child(6) {
       text-align: right; }
 
+.label-list {
+  margin: 0.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .label-list .label-item {
+    padding: 0.10667rem 0.26667rem;
+    font-size: 0.37333rem;
+    border: 1px solid #ddd;
+    background-color: #fbebe8;
+    margin-right: 0.26667rem;
+    margin-bottom: 0.26667rem;
+    border-radius: 0.10667rem; }
+    .label-list .label-item:nth-child(3n+2) {
+      background-color: #fcedda; }
+    .label-list .label-item:nth-child(3n) {
+      background-color: #e8f9db; }
+
+
+@charset "UTF-8";
+/*超过几行显示省略号*/
+/*背景*/
+/* 滚动 */
+/*html {
+    font-size: $browser-default-font-size;
+}*/
+html {
+  font-size: 37.5px; }
+
+/*字体大小*/
+/*灰色字体颜色*/
+/*白色字体*/
+/*黑色字体*/
+/*按钮灰色边框*/
+/*蓝色边框颜色*/
+/*蓝色字体颜色*/
+/*group 底部边框颜色*/
+/*header背景*/
+/*搜索框border颜色*/
+/*banner buttle*/
+/*orange line颜色*/
+/*line bottom颜色*/
+/* 书背景*/
+/* 书边框颜色 */
+/*书的阴影*/
+/*绿色标签颜色*/
+/*限免tag背景*/
+/*按钮背景颜色*/
+/*按钮border颜色*/
+/*标签背景*/
+/*标签背景色*/
+/*详情界面*/
+/* 阅读界面 */
+/*阅读界面标题*/
+.result {
+  margin: 0.4rem;
+  display: none; }
+  .result dl {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .result dl dt {
+      width: 2.66667rem;
+      height: 3.2rem;
+      display: inline-block;
+      overflow: hidden;
+      margin-right: 0.26667rem;
+      -ms-flex-negative: 0;
+          flex-shrink: 0; }
+      .result dl dt img {
+        width: 100%;
+        height: 100%; }

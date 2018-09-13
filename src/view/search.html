@@ -1,0 +1,43 @@
+<div class="inner-wrap">
+    <header>
+        <span class="icon-back"></span>
+        <div class="search">
+            <span class="icon-search"></span>
+            <input type="text" class="ipt" placeholder="请输入关键词，书名">
+            <button class="search-btn">搜索</button>
+        </div>
+    </header>
+    <div class="search-con">
+        <div class="keys">
+            <h2>热门搜索关键词</h2>
+            <ul class="label-list hot-key"></ul>  
+            <h2>历史搜索关键词</h2>
+            <ul class="label-list history"></ul>
+        </div>
+
+        <script type="text/x-handlebars-template" id="hotkey-tpl">
+            {{#each this}}
+            <li class="label-item">{{ad_name}}</li>
+
+             {{/each}}
+        </script>
+
+        <!-- 搜索结果 -->
+        <div class="result"></div> 
+
+        <script type="text/x-handlebars-template" id="result-tpl">
+            {{#each this}}
+            <dl>
+                <dt>
+                    <img src="{{cover}}" alt="">
+                </dt>
+                <dd>
+                    <h3>{{title}}</h3>
+                    <p>{{intro}}</p>
+                    <span>作者</span>
+                </dd>
+            </dl>
+            {{/each}}
+        </script>
+    </div>
+</div>

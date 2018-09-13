@@ -6,6 +6,7 @@ require.config({
         'page': './libs/page',
         'swiper': './libs/swiper.min',
         'handlebars': './libs/handlebars-v4.0.11',
+        'text': './libs/text',
 
         //common
         'get': './common/get',
@@ -17,7 +18,12 @@ require.config({
 
         //view
         'index': './viewjs/index',
-        'detail': './viewjs/detail'
+        'detail': './viewjs/detail',
+        'search':'./viewjs/search',
+
+        //模板
+        'listTB': '../view/tpl/list-t-b.html',
+        'listLR': '../view/tpl/list-l-r.html'
 
     }
 })

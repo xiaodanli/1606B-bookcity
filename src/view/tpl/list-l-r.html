@@ -1,0 +1,21 @@
+<script type="text/x-handlebars-template" id="l-r-tpl">
+    {{#each this}}
+    <dl>
+        <dt>
+            <img src="{{cover}}" alt="">
+            <span class="first-num">{{addIndex @index}}</span> 
+            <span class="status">{{#if finish}}完结{{else}}连载中{{/if}}</span> 
+        </dt>
+        <dd>
+            <h3>{{title}}</h3>
+            <span class="author">{{authors}}</span>
+            <p class="intro">{{summary}}</p>
+            <ul class="tag-list">
+                {{#each tags}}
+                <li class="tag-item">{{this}}</li>
+                {{/each}}
+            </ul>
+        </dd>
+    </dl>
+    {{/each}}
+</script>

@@ -30,6 +30,8 @@ gulp.task('devServer', function() {
                     return
                 }
 
+                console.log(req.url);
+
                 //   /index   /detail  /my  /  =====> index.html
 
                 //  .js  .css .html  /  /
@@ -43,7 +45,7 @@ gulp.task('devServer', function() {
                             return obj[url]
                         }
                     */
-                    res.end(JSON.stringify({ code: 1, data: mock(pathname) }))
+                    res.end(JSON.stringify({ code: 1, data: mock(req.url) }))
                 } else {
                     // pathname = pathname === '/' ? '/index.html' : pathname;
                     pathname = /\.js|\.css|\.html|\.jpg|\.png$/.test(pathname) ? pathname : '/index.html';

@@ -1,0 +1,23 @@
+@import './_mixin.scss';
+@import './_config.scss';
+
+.result{
+    margin:pxTorem(15px);
+    display: none;
+    dl{
+        width:100%;
+        display: flex;
+        dt {
+            width: pxTorem(100px);
+            height: pxTorem(120px);
+            display: inline-block;
+            overflow: hidden;
+            margin-right:pxTorem(10px);
+            flex-shrink: 0;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

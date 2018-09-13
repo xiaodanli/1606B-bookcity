@@ -4,6 +4,10 @@ define(['jquery', 'handlebars'], function($, handlebars) {
 
         var template = handlebars.compile(source);
 
+        handlebars.registerHelper('addIndex', function(index) {
+            return index + 1
+        })
+
         var html = template(data);
 
         if (isAppend) {

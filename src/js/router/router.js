@@ -8,6 +8,8 @@ require(['page', 'config'], function(page, config) {
 
     page('/detail', config.detail);
 
+    page('/search',config.search);
+
     page('*', config.script);
 
     page(); //开启路由
