@@ -1,0 +1,1 @@
+"use strict";require(["page","config"],function(i,t){i("*",t.start),i("/","/index"),i("/index",t.index),i("/detail/:fiction_id",t.detail),i("/search",t.search),i("/chapter/:fiction_id/:chapter_id",t.chapter),i("/artical/:fiction_id/:chapter_id",t.artical),i("/login",t.login),i("/my",t.my),i("*",t.script),i()});

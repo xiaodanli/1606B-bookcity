@@ -1,7 +1,7 @@
 define(['jquery','render','get','base64'],function($,render,get,base64){
     var init = function(params){
 
-        var _articalModel = $('.artical-model'),
+        let _articalModel = $('.artical-model'),
             _setStyle = $('.set-style'),
             _fzChange = $('.fz-change');
         //点击内容

@@ -4,7 +4,9 @@
   "description": "1606B-bookcity",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev":"gulp dev",
+    "build":"gulp build",
+    "server":"gulp buildServer" 
   },
   "repository": {
     "type": "git",
@@ -17,7 +19,10 @@
   },
   "homepage": "https://github.com/xiaodanli/1606B-bookcity#readme",
   "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
     "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
     "gulp-sass": "^4.0.1",
     "gulp-webserver": "^0.9.1"
   }

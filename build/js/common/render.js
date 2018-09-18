@@ -1,0 +1,1 @@
+"use strict";define(["jquery","handlebars"],function(d,c){return function(e,n,r,t){var i=d(e).html(),u=c.compile(i);c.registerHelper("addIndex",function(e){return e+1});var a=u(n);t?d(r).append(a):d(r).html(a)}});

@@ -1,0 +1,18 @@
+<div class="inner-wrap">
+    <header>
+        <span class="icon-back"></span>
+        <span class="head-tit">目录</span>
+    </header>
+
+    <div class="chapter-con">
+        <div class="chapter-inner">
+            <ul class="chapter-list"></ul>
+        </div>
+    </div>
+
+    <script type="text/x-handlebars-template" id="chapter-tpl">
+        {{#each this}}
+        <li data-id={{chapter_id}}>{{title}}</li>
+        {{/each}}
+    </script>
+</div>
