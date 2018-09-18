@@ -18,6 +18,10 @@ var autoprefixer = require('gulp-autoprefixer');
 
 var concat = require('gulp-concat');
 
+var querystring = require('querystring');
+
+var userlist = require('./mock/data/userlist.json');
+
 gulp.task('devServer', function() {
     return gulp.src('src')
         .pipe(server({
@@ -35,8 +39,24 @@ gulp.task('devServer', function() {
                 //   /index   /detail  /my  /  =====> index.html
 
                 //  .js  .css .html  /  /
-
-                if (/^\/api/.test(pathname)) {
+                if(pathname === '/api/login'){
+                    var arr = [];
+                    req.on('data',function(chunk){
+                        arr.push(chunk);
+                    })
+                    req.on('end',function(){
+                        var params = querystring.parse(Buffer.concat(arr).toString());
+                        console.log(params);
+                        var isHas = userlist.some(function(item){
+                            return item.username == params.username && item.pwd == params.pwd
+                        });
+                        if(isHas){
+                            res.end(JSON.stringify({code:1,msg:'登录成功'}));
+                        }else{
+                            res.end(JSON.stringify({code:0,msg:'登录失败'}));
+                        }
+                    })
+                }else if (/^\/api/.test(pathname)) {
 
                     // /api/index  /api/detail
 

@@ -1,1 +1,56 @@
-<div>详情</div>
+<div class="inner-wrap">
+    <header>
+        <span class="icon-back"></span>
+        <span class="head-tit">书名</span>
+    </header>
+    <div class="detail-con">
+        <div class="block detail-top"></div>
+
+        <script type="text/x-handlebars-template" id="detail-tpl">
+        
+            <dl class="book-info">
+                <dt>
+                    <img src="{{cover}}" alt="">
+                </dt>
+                <dd>
+                    <h3>{{title}}</h3>
+                    <span class="author">
+                        {{authors}}
+                    </span>
+                    <span class="prize">评价:{{score_count}}</span>
+                    <span class="price">价格:{{price}}</span>
+                    <span class="num">字数:{{word_count}} <i>{{#if finish}}完结{{else}}连载中{{/if}}</i></span>
+                </dd>
+            </dl>
+
+            <div class="btns">
+                <button class="read-btn">开始阅读</button>
+                <button class="download-btn">下载</button>
+            </div>
+
+            <p class="intro">
+                {{content}}
+            </p>
+            
+            <a class="new" href="/chapter/{{fiction_id}}/0">
+                {{latest}}
+            </a>
+        </script>
+        <!-- 类别标签 -->
+        <div class="block">
+            <h2>类别标签</h2>
+            <div class="label"></div>
+        </div>
+
+        <!-- 作者其他书籍 -->
+        <div class="block">
+            <h2>作者其他书籍</h2>
+            <div class="other list-t-b"></div>
+        </div>
+
+        <!-- 版权 -->
+        <div class="block">
+            <h2>版权信息</h2>
+        </div>
+    </div>
+</div>

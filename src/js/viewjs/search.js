@@ -1,4 +1,5 @@
-define(['jquery','render','get'],function($,render,get){
+define(['jquery','render','get','text!labelTpl'],function($,render,get,labelTpl){
+    $('body').append(labelTpl);
     var init = function(params){
 
         //请求热门搜索关键词
@@ -7,7 +8,7 @@ define(['jquery','render','get'],function($,render,get){
             var data = JSON.parse(res);
 
             if(data.code === 1){
-                render('#hotkey-tpl',data.data.ads,'.hot-key');
+                render('#label-tpl',data.data.ads,'.hot-key');
             }
         }).catch(function(error){
             console.warn(error);
@@ -30,7 +31,7 @@ define(['jquery','render','get'],function($,render,get){
         var history = JSON.parse(storage.getItem('history')) || [];
 
         if(history.length){
-            render('#hotkey-tpl',history,'.history');
+            render('#label-tpl',history,'.history');
         }
 
         function searchFun(val){
@@ -43,7 +44,7 @@ define(['jquery','render','get'],function($,render,get){
             if(!isHas){
                 history.push({ad_name:val});
                 storage.setItem('history',JSON.stringify(history));
-                render('#hotkey-tpl',history,'.history');
+                render('#label-tpl',history,'.history');
             }
 
             get(url).then(function(res){
@@ -69,7 +70,7 @@ define(['jquery','render','get'],function($,render,get){
         })
 
         //点击label
-        $('.label-list').on('click','li',function(){
+        $('.keys').on('click','li',function(){
             var key = $(this).html();
             $('.ipt').val(key);
             searchFun(key);

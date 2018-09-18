@@ -1,6 +1,6 @@
 define(['jquery'], function($) {
     var cache = {};
-    var get = function(url, data) {
+    var get = function(url, data,type) {
         return new Promise(function(reslove, reject) {
             if (cache[url]) {
                 reslove(cache[url]);
@@ -9,6 +9,7 @@ define(['jquery'], function($) {
             $.ajax({
                 url: url,
                 dataType: 'text',
+                type:type||'get',
                 data: data || null,
                 success: function(res) {
                     cache[url] = res;

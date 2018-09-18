@@ -4,9 +4,27 @@ var loadmore = require('./data/loadmore.json');
 var hotkeyJson = require('./data/search-hot.json');
 
 var searchJson = require('./data/search.json');
+
+var detailJson = require('./data/352876.json');
+
+var chapterJson = require('./data/chapter-list.json');
+
+var chapter1 = require('./data/artical/data1.json');
+var chapter2 = require('./data/artical/data2.json');
+var chapter3 = require('./data/artical/data3.json');
+var chapter4 = require('./data/artical/data4.json');
+
+
+
 var obj = {
     '/api/index': indexJson,
-    '/api/hotkey':hotkeyJson
+    '/api/hotkey':hotkeyJson,
+    '/api/detail?fiction_id=352876':detailJson,
+    '/api/chapter?fiction_id=352876':chapterJson,
+    '/api/articalurl?fiction_id=352876&chapter_id=1':chapter1,
+    '/api/articalurl?fiction_id=352876&chapter_id=2':chapter2,
+    '/api/articalurl?fiction_id=352876&chapter_id=3':chapter3,
+    '/api/articalurl?fiction_id=352876&chapter_id=4':chapter4
 };
 
 var url = require('url');

@@ -7,6 +7,8 @@ require.config({
         'swiper': './libs/swiper.min',
         'handlebars': './libs/handlebars-v4.0.11',
         'text': './libs/text',
+        'bscroll':'./libs/bscroll',
+        'base64':'./libs/jquery.base64',
 
         //common
         'get': './common/get',
@@ -20,10 +22,14 @@ require.config({
         'index': './viewjs/index',
         'detail': './viewjs/detail',
         'search':'./viewjs/search',
+        'chapter':'./viewjs/chapter',
+        'artical':'./viewjs/artical',
+        'login':'./viewjs/login',
 
         //模板
         'listTB': '../view/tpl/list-t-b.html',
-        'listLR': '../view/tpl/list-l-r.html'
+        'listLR': '../view/tpl/list-l-r.html',
+        'labelTpl':'../view/tpl/label.html'
 
     }
 })

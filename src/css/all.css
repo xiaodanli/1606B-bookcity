@@ -33,6 +33,210 @@ html {
 /*详情界面*/
 /* 阅读界面 */
 /*阅读界面标题*/
+.artical-con {
+  padding: 0.4rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  background-color: #f7eee5; }
+  .artical-con h3 {
+    font-size: 0.53333rem;
+    font-weight: bold;
+    border-bottom: 1px solid #736357;
+    color: #736357;
+    line-height: 1.5; }
+  .artical-con p {
+    font-size: 0.37333rem;
+    line-height: 1.5;
+    color: #4e534f;
+    margin-top: 0.26667rem;
+    text-indent: 2em; }
+
+.artical-model {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+  .artical-model > div {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .artical-model .model-top {
+    width: 100%;
+    height: 1.17333rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    line-height: 1.17333rem; }
+    .artical-model .model-top span {
+      padding-left: 1.17333rem;
+      background: url("../imgs/icon-circle-back.png") no-repeat 0.4rem center;
+      background-size: 0.53333rem; }
+  .artical-model .model-center {
+    width: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    background-color: transparent; }
+  .artical-model .model-bottom {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff; }
+    .artical-model .model-bottom .set-chapter {
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      line-height: 1.17333rem;
+      color: #fff;
+      border-bottom: 1px solid #fff; }
+    .artical-model .model-bottom .set-panel {
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: distribute;
+          justify-content: space-around; }
+      .artical-model .model-bottom .set-panel dt {
+        width: 1.17333rem;
+        height: 1.17333rem;
+        background: url("../imgs/icon-chapter.png") no-repeat center center;
+        background-size: 0.53333rem; }
+      .artical-model .model-bottom .set-panel .fz-change dt {
+        background: url("../imgs/icon-font.png") no-repeat center center;
+        background-size: 0.53333rem; }
+      .artical-model .model-bottom .set-panel .fz-change.active dt {
+        background: url("../imgs/icon-font-active.png") no-repeat center center;
+        background-size: 0.53333rem; }
+      .artical-model .model-bottom .set-panel .day-btn dt {
+        background: url("../imgs/icon-night.png") no-repeat center center;
+        background-size: 0.53333rem; }
+      .artical-model .model-bottom .set-panel .day-btn.light dt {
+        background: url("../imgs/icon-light.png") no-repeat center center;
+        background-size: 0.53333rem; }
+      .artical-model .model-bottom .set-panel .down-btn dt {
+        background: url("../imgs/icon-down.png") no-repeat center center;
+        background-size: 0.53333rem; }
+      .artical-model .model-bottom .set-panel dd {
+        text-align: center; }
+    .artical-model .model-bottom .set-style {
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      position: absolute;
+      bottom: 1.6rem;
+      padding: 0.13333rem 0 0.4rem 0; }
+      .artical-model .model-bottom .set-style div {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        margin-top: 0.26667rem; }
+        .artical-model .model-bottom .set-style div span {
+          width: 2.66667rem;
+          text-align: center; }
+        .artical-model .model-bottom .set-style div .fz-btn {
+          -webkit-box-flex: 1;
+              -ms-flex: 1;
+                  flex: 1; }
+          .artical-model .model-bottom .set-style div .fz-btn button {
+            width: 2.13333rem;
+            height: 0.8rem;
+            border: 1px solid #fff;
+            color: #fff;
+            background-color: transparent;
+            border-radius: 0.32rem;
+            font-size: 0.37333rem;
+            margin-right: 0.26667rem; }
+        .artical-model .model-bottom .set-style div .set-bg {
+          -webkit-box-flex: 1;
+              -ms-flex: 1;
+                  flex: 1;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex; }
+          .artical-model .model-bottom .set-style div .set-bg li {
+            width: 0.90667rem;
+            height: 0.90667rem;
+            border-radius: 50%;
+            background-color: #f7eee5;
+            margin-right: 0.26667rem;
+            position: relative; }
+            .artical-model .model-bottom .set-style div .set-bg li.active:before {
+              content: '';
+              width: 1.01333rem;
+              height: 1.01333rem;
+              display: block;
+              border: 2px solid red;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              -webkit-transform: translate3d(-50%, -50%, 0);
+                      transform: translate3d(-50%, -50%, 0);
+              border-radius: 50%; }
+            .artical-model .model-bottom .set-style div .set-bg li:nth-child(2) {
+              background-color: #e9dfc7; }
+            .artical-model .model-bottom .set-style div .set-bg li:nth-child(3) {
+              background-color: #a4a4a4; }
+            .artical-model .model-bottom .set-style div .set-bg li:nth-child(4) {
+              background-color: #cdefce; }
+            .artical-model .model-bottom .set-style div .set-bg li:nth-child(5) {
+              background-color: #283548; }
+            .artical-model .model-bottom .set-style div .set-bg li:nth-child(6) {
+              background-color: #0f1410; }
+
+.none {
+  display: none; }
+
+@charset "UTF-8";
+/*超过几行显示省略号*/
+/*背景*/
+/* 滚动 */
+/*html {
+    font-size: $browser-default-font-size;
+}*/
+html {
+  font-size: 37.5px; }
+
+/*字体大小*/
+/*灰色字体颜色*/
+/*白色字体*/
+/*黑色字体*/
+/*按钮灰色边框*/
+/*蓝色边框颜色*/
+/*蓝色字体颜色*/
+/*group 底部边框颜色*/
+/*header背景*/
+/*搜索框border颜色*/
+/*banner buttle*/
+/*orange line颜色*/
+/*line bottom颜色*/
+/* 书背景*/
+/* 书边框颜色 */
+/*书的阴影*/
+/*绿色标签颜色*/
+/*限免tag背景*/
+/*按钮背景颜色*/
+/*按钮border颜色*/
+/*标签背景*/
+/*标签背景色*/
+/*详情界面*/
+/* 阅读界面 */
+/*阅读界面标题*/
 .con .swiper-container {
   height: 100%; }
   .con .swiper-container .swiper-slide {
@@ -191,6 +395,58 @@ html {
               flex-direction: column; }
       .shelf-list.list-style dl .author, .shelf-list.list-style dl .new, .shelf-list.list-style dl .already {
         display: none; }
+
+@charset "UTF-8";
+/*超过几行显示省略号*/
+/*背景*/
+/* 滚动 */
+/*html {
+    font-size: $browser-default-font-size;
+}*/
+html {
+  font-size: 37.5px; }
+
+/*字体大小*/
+/*灰色字体颜色*/
+/*白色字体*/
+/*黑色字体*/
+/*按钮灰色边框*/
+/*蓝色边框颜色*/
+/*蓝色字体颜色*/
+/*group 底部边框颜色*/
+/*header背景*/
+/*搜索框border颜色*/
+/*banner buttle*/
+/*orange line颜色*/
+/*line bottom颜色*/
+/* 书背景*/
+/* 书边框颜色 */
+/*书的阴影*/
+/*绿色标签颜色*/
+/*限免tag背景*/
+/*按钮背景颜色*/
+/*按钮border颜色*/
+/*标签背景*/
+/*标签背景色*/
+/*详情界面*/
+/* 阅读界面 */
+/*阅读界面标题*/
+.chapter-con {
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow: hidden; }
+  .chapter-con ul {
+    width: 100%; }
+    .chapter-con ul li {
+      width: 100%;
+      height: 1.17333rem;
+      line-height: 1.17333rem;
+      padding-left: 0.4rem;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      border-bottom: 1px solid #ddd; }
 
 @charset "UTF-8";
 /*超过几行显示省略号*/
@@ -502,6 +758,9 @@ body {
           outline: none;
           border: none;
           border-left: 1px solid #ddd; }
+      .wrap .inner-wrap header .head-tit {
+        padding-left: 1.17333rem;
+        line-height: 1.17333rem; }
     .wrap .inner-wrap .con {
       width: 100%;
       -webkit-box-flex: 1;
@@ -531,8 +790,15 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
-  .list-t-b dl {
+  .list-t-b a {
+    display: block;
     width: 33.3%; }
+    .list-t-b a:nth-child(2) dl, .list-t-b a:nth-child(5) dl {
+      text-align: center; }
+    .list-t-b a:nth-child(3) dl, .list-t-b a:nth-child(6) dl {
+      text-align: right; }
+  .list-t-b dl {
+    width: 100%; }
     .list-t-b dl dt {
       width: 2.66667rem;
       height: 3.2rem;
@@ -545,10 +811,6 @@ body {
       width: 2.66667rem;
       display: inline-block;
       text-align: left; }
-    .list-t-b dl:nth-child(2), .list-t-b dl:nth-child(5) {
-      text-align: center; }
-    .list-t-b dl:nth-child(3), .list-t-b dl:nth-child(6) {
-      text-align: right; }
 
 .label-list {
   margin: 0.4rem;
@@ -570,6 +832,152 @@ body {
     .label-list .label-item:nth-child(3n) {
       background-color: #e8f9db; }
 
+@charset "UTF-8";
+/*超过几行显示省略号*/
+/*背景*/
+/* 滚动 */
+/*html {
+    font-size: $browser-default-font-size;
+}*/
+html {
+  font-size: 37.5px; }
+
+/*字体大小*/
+/*灰色字体颜色*/
+/*白色字体*/
+/*黑色字体*/
+/*按钮灰色边框*/
+/*蓝色边框颜色*/
+/*蓝色字体颜色*/
+/*group 底部边框颜色*/
+/*header背景*/
+/*搜索框border颜色*/
+/*banner buttle*/
+/*orange line颜色*/
+/*line bottom颜色*/
+/* 书背景*/
+/* 书边框颜色 */
+/*书的阴影*/
+/*绿色标签颜色*/
+/*限免tag背景*/
+/*按钮背景颜色*/
+/*按钮border颜色*/
+/*标签背景*/
+/*标签背景色*/
+/*详情界面*/
+/* 阅读界面 */
+/*阅读界面标题*/
+.detail-con {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch; }
+  .detail-con .book-info {
+    margin: 0.4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .detail-con .book-info dt {
+      width: 2.66667rem;
+      height: 3.2rem;
+      display: inline-block;
+      overflow: hidden;
+      margin-right: 0.53333rem; }
+      .detail-con .book-info dt img {
+        width: 100%;
+        height: 100%; }
+    .detail-con .book-info dd span {
+      display: block; }
+  .detail-con .btns {
+    margin: 0.4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .detail-con .btns button {
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      height: 1.17333rem;
+      background-color: transparent;
+      outline: none;
+      border: none;
+      font-size: 0.37333rem;
+      border-radius: 0.16rem; }
+    .detail-con .btns .read-btn {
+      background-color: #f35d02;
+      border: 1px solid #e35109;
+      color: #fff;
+      margin-right: 0.26667rem; }
+    .detail-con .btns .download-btn {
+      border: 1px solid #ddd; }
+  .detail-con .intro {
+    margin: 0.4rem;
+    line-height: 1.5;
+    font-size: 0.37333rem;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical; }
+  .detail-con .new {
+    width: 100%;
+    height: 1.17333rem;
+    display: block;
+    line-height: 1.17333rem;
+    text-align: center;
+    border-top: 1px solid #ddd; }
+
+
+@charset "UTF-8";
+/*超过几行显示省略号*/
+/*背景*/
+/* 滚动 */
+/*html {
+    font-size: $browser-default-font-size;
+}*/
+html {
+  font-size: 37.5px; }
+
+/*字体大小*/
+/*灰色字体颜色*/
+/*白色字体*/
+/*黑色字体*/
+/*按钮灰色边框*/
+/*蓝色边框颜色*/
+/*蓝色字体颜色*/
+/*group 底部边框颜色*/
+/*header背景*/
+/*搜索框border颜色*/
+/*banner buttle*/
+/*orange line颜色*/
+/*line bottom颜色*/
+/* 书背景*/
+/* 书边框颜色 */
+/*书的阴影*/
+/*绿色标签颜色*/
+/*限免tag背景*/
+/*按钮背景颜色*/
+/*按钮border颜色*/
+/*标签背景*/
+/*标签背景色*/
+/*详情界面*/
+/* 阅读界面 */
+/*阅读界面标题*/
+.form input {
+  width: 80%;
+  height: 1.17333rem;
+  display: block;
+  margin: 10px auto;
+  border: 1px solid gray;
+  font-size: 0.37333rem; }
+
+.form button {
+  width: 60%;
+  height: 1.17333rem;
+  display: block;
+  margin: 0 auto;
+  font-size: 0.37333rem; }
 
 @charset "UTF-8";
 /*超过几行显示省略号*/
